@@ -4,9 +4,9 @@ const bodyParser = require('body-parser');
 const connectDB = require('./Database/MongodbConfiguration');
 const routes = require('./Routes/Routes');
 require('dotenv').config();
-const cors = require('cors'); 
+const cors=require('cors')
 const app = express();
-app.use(cors());
+app.use(())
 app.use(bodyParser.json());
 connectDB();
 const PORT = process.env.PORT || 4000;
