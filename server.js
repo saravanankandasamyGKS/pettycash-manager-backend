@@ -3,14 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const connectDB = require('./Database/MongodbConfiguration');
 const routes = require('./Routes/Routes');
-const cors = require('cors'); 
 require('dotenv').config();
-
+const cors = require('cors'); 
 const app = express();
-
-app.use(bodyParser.json());
 app.use(cors());
-
+app.use(bodyParser.json());
 connectDB();
 const PORT = process.env.PORT || 4000;
 
